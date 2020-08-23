@@ -1,8 +1,8 @@
 FROM python:3.6
 LABEL maintainer="@brentclaster"
-COPY . /simplepy
-WORKDIR /simplepy
+COPY . /app
+WORKDIR /app
 RUN pip install -r requirements.txt
 EXPOSE 8080
 ENTRYPOINT ["python"]
-CMD ["simplepy/app.py"]
+CMD ["app/app.py"]
