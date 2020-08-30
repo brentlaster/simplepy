@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -17,7 +9,9 @@ import socket
 app = Flask(__name__)
 host_name = socket.gethostname()
 host_ip = socket.gethostbyname(host_name)
-host_id = host_ip if host_name.isalnum() else host_name
+fqdn = socket.getfqdn()
+print (fqdn)
+host_id = host_ip if host_name.isalnum() else fqdn
 
 @app.errorhandler(Exception)
 def handle_error(e):
