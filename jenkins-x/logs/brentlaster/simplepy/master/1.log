@@ -1,0 +1,147 @@
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1600083407.963622,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-brentlaster-simplepy-master-d84n8-rz4n8[0m
+{"level":"info","ts":1600083416.4484847,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/brentlaster/simplepy.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1600083416.4485679,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1600083416.4912581,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0914 11:37:04.738460      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest python:3.6         
+E0914 11:37:05.127999      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0914 11:37:05.134116      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest python:3.6         
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest python:3.6         
+[36mINFO[0m[0003] Retrieving image manifest python:3.6         
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] Applying label maintainer=@brentclaster      
+[36mINFO[0m[0004] Checking for cached layer gcr.io/**-example-258516/cache:06f2a2196304c7f6c0aa56139f9bddd4021e2f8833789f294dbf9cb796e51d28... 
+[36mINFO[0m[0004] No cached layer found for cmd COPY . /app    
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Unpacking rootfs as cmd COPY . /app requires it. 
+[36mINFO[0m[0030] LABEL maintainer="@brentclaster"             
+[36mINFO[0m[0030] Applying label maintainer=@brentclaster      
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0030] COPY . /app                                  
+[36mINFO[0m[0030] Resolving 126 paths                          
+[36mINFO[0m[0030] Taking snapshot of files...                  
+[36mINFO[0m[0030] WORKDIR /app                                 
+[36mINFO[0m[0030] cmd: workdir                                 
+[36mINFO[0m[0030] Changed working directory to /app            
+[36mINFO[0m[0030] Pushing layer gcr.io/**-example-258516/cache:06f2a2196304c7f6c0aa56139f9bddd4021e2f8833789f294dbf9cb796e51d28 to cache now 
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0030] RUN pip install -r requirements.txt          
+[36mINFO[0m[0030] Taking snapshot of full filesystem...        
+[36mINFO[0m[0033] Resolving 31214 paths                        
+[36mINFO[0m[0037] cmd: /bin/sh                                 
+[36mINFO[0m[0037] args: [-c pip install -r requirements.txt]   
+[36mINFO[0m[0037] Running: [/bin/sh -c pip install -r requirements.txt] 
+Collecting click==7.1.2
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+Collecting Flask==1.1.1
+  Downloading Flask-1.1.1-py2.py3-none-any.whl (94 kB)
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.11.2
+  Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl (27 kB)
+Collecting Werkzeug==1.0.1
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Installing collected packages: click, itsdangerous, Werkzeug, MarkupSafe, Jinja2, Flask
+Successfully installed Flask-1.1.1 Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 itsdangerous-1.1.0
+[36mINFO[0m[0041] Taking snapshot of full filesystem...        
+[36mINFO[0m[0041] Resolving 32064 paths                        
+[36mINFO[0m[0045] Pushing layer gcr.io/**-example-258516/cache:3901d15eb6ab7232104726e6a641b8a9f5a24d5d4d764e2c4bc7ebce9b84d51a to cache now 
+[36mINFO[0m[0045] EXPOSE 8080                                  
+[36mINFO[0m[0045] cmd: EXPOSE                                  
+[36mINFO[0m[0045] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0045] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0045] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0045] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0045] CMD ["app/app.py"]                           
+[36mINFO[0m[0045] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/simplepy to an unshallow repository
+Generating change log from git ref 8dc1d219ccb5164b501450e5e6c0328b4ad21c34 => bafb9c2b762380a68439aef405c0886f8f2a17ab
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+Associating user brentlaster in users.jenkins.io with email Brent.Laster@sas.com to git GitProvider user with login brentlaster-0 as emails match
+Adding label jenkins.io/git-github-userid=brentlaster-0 to user brentlaster in users.jenkins.io
+Associating user brentlaster in users.jenkins.io with email Brent.Laster@sas.com to git GitProvider user with login brentlaster-0 as emails match
+Adding label jenkins.io/git-github-userid=brentlaster-0 to user brentlaster in users.jenkins.io
+Associating user brentlaster in users.jenkins.io with email Brent.Laster@sas.com to git GitProvider user with login brentlaster-0 as emails match
+Adding label jenkins.io/git-github-userid=brentlaster-0 to user brentlaster in users.jenkins.io
+Associating user brentlaster in users.jenkins.io with email Brent.Laster@sas.com to git GitProvider user with login brentlaster-0 as emails match
+Adding label jenkins.io/git-github-userid=brentlaster-0 to user brentlaster in users.jenkins.io
+Associating user brentlaster in users.jenkins.io with email Brent.Laster@sas.com to git GitProvider user with login brentlaster-0 as emails match
+Adding label jenkins.io/git-github-userid=brentlaster-0 to user brentlaster in users.jenkins.io
+Associating user brentlaster in users.jenkins.io with email Brent.Laster@sas.com to git GitProvider user with login brent-laster as emails match
+Adding label jenkins.io/git-github-userid=brent-laster to user brentlaster in users.jenkins.io
+Associating user brentlaster in users.jenkins.io with email Brent.Laster@sas.com to git GitProvider user with login brent-laster as emails match
+Adding label jenkins.io/git-github-userid=brent-laster to user brentlaster in users.jenkins.io
+Associating user brent-laster in users.jenkins.io with email bcl@nclasters.org to git GitProvider user with login brent-laster-0 as emails match
+Adding label jenkins.io/git-github-userid=brent-laster-0 to user brent-laster in users.jenkins.io
+Associating user brent-laster in users.jenkins.io with email bcl@nclasters.org to git GitProvider user with login brent-laster-0 as emails match
+Adding label jenkins.io/git-github-userid=brent-laster-0 to user brent-laster in users.jenkins.io
+Associating user brent-laster in users.jenkins.io with email bcl@nclasters.org to git GitProvider user with login brent-laster-0 as emails match
+Adding label jenkins.io/git-github-userid=brent-laster-0 to user brent-laster in users.jenkins.io
+WARNING: No release found for brentlaster/simplepy and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/brentlaster/simplepy/releases/tag/v0.0.1
+generated: /workspace/source/charts/simplepy/templates/release.yaml
+Created Release simplepy-0-0-1 resource in namespace **
+Updating PipelineActivity brentlaster-simplepy-master-1 with version 0.0.1
+Updated PipelineActivities brentlaster-simplepy-master-1 with release notes URL: https://github.com/brentlaster/simplepy/releases/tag/v0.0.1
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file simplepy-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mbrentlaster-simplepy-master-d84n8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app simplepy version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/explore-jenkinsx/environment-**4-staging/pull/11
+Added label updatebot to Pull Request https://github.com/explore-jenkinsx/environment-**4-staging/pull/11
+got git provider status pending from PR https://github.com/explore-jenkinsx/environment-**4-staging/pull/11
+got git provider status pending from PR https://github.com/explore-jenkinsx/environment-**4-staging/pull/11
+got git provider status pending from PR https://github.com/explore-jenkinsx/environment-**4-staging/pull/11
