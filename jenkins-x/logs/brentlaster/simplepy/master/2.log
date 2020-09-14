@@ -1,0 +1,123 @@
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1600085256.7669365,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-brentlaster-simplepy-master-hrqqj-9pv4d[0m
+{"level":"info","ts":1600085264.7876956,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/brentlaster/simplepy.git @ v0.0.2 in path /workspace/source"}
+{"level":"warn","ts":1600085264.787788,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1600085264.8317325,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0914 12:07:53.253018      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest python:3.6         
+E0914 12:07:53.617228      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0914 12:07:53.620841      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest python:3.6         
+[36mINFO[0m[0004] Built cross stage deps: map[]                
+[36mINFO[0m[0004] Retrieving image manifest python:3.6         
+[36mINFO[0m[0004] Retrieving image manifest python:3.6         
+[36mINFO[0m[0005] Executing 0 build triggers                   
+[36mINFO[0m[0005] Applying label maintainer=@brentclaster      
+[36mINFO[0m[0005] Checking for cached layer gcr.io/**-example-258516/cache:3baffb181a9969b06f43174e1d053227c69ea1edf399b4ce3b72e9cdd9de07a9... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . /app    
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . /app requires it. 
+[36mINFO[0m[0031] LABEL maintainer="@brentclaster"             
+[36mINFO[0m[0031] Applying label maintainer=@brentclaster      
+[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0031] COPY . /app                                  
+[36mINFO[0m[0031] Resolving 127 paths                          
+[36mINFO[0m[0031] Taking snapshot of files...                  
+[36mINFO[0m[0031] Pushing layer gcr.io/**-example-258516/cache:3baffb181a9969b06f43174e1d053227c69ea1edf399b4ce3b72e9cdd9de07a9 to cache now 
+[36mINFO[0m[0031] WORKDIR /app                                 
+[36mINFO[0m[0031] cmd: workdir                                 
+[36mINFO[0m[0031] Changed working directory to /app            
+[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0031] RUN pip install -r requirements.txt          
+[36mINFO[0m[0031] Taking snapshot of full filesystem...        
+[36mINFO[0m[0033] Resolving 31215 paths                        
+[36mINFO[0m[0167] cmd: /bin/sh                                 
+[36mINFO[0m[0167] args: [-c pip install -r requirements.txt]   
+[36mINFO[0m[0167] Running: [/bin/sh -c pip install -r requirements.txt] 
+Collecting click==7.1.2
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+Collecting Flask==1.1.1
+  Downloading Flask-1.1.1-py2.py3-none-any.whl (94 kB)
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.11.2
+  Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl (27 kB)
+Collecting Werkzeug==1.0.1
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Installing collected packages: click, itsdangerous, MarkupSafe, Jinja2, Werkzeug, Flask
+Successfully installed Flask-1.1.1 Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 itsdangerous-1.1.0
+[36mINFO[0m[0171] Taking snapshot of full filesystem...        
+[36mINFO[0m[0171] Resolving 32065 paths                        
+[36mINFO[0m[0175] Pushing layer gcr.io/**-example-258516/cache:07be09caacd69631ea6affb7cc59763f34397f58a6f884cab921bd84b618b1a1 to cache now 
+[36mINFO[0m[0175] EXPOSE 8080                                  
+[36mINFO[0m[0175] cmd: EXPOSE                                  
+[36mINFO[0m[0175] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0175] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0175] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0175] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0175] CMD ["app/app.py"]                           
+[36mINFO[0m[0175] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/simplepy to an unshallow repository
+Generating change log from git ref bafb9c2b762380a68439aef405c0886f8f2a17ab => 3e9ce5ffe6416e1553ef6542ef55cbe9b5fcb031
+WARNING: No release found for brentlaster/simplepy and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/brentlaster/simplepy/releases/tag/v0.0.2
+generated: /workspace/source/charts/simplepy/templates/release.yaml
+Created Release simplepy-0-0-2 resource in namespace **
+Updating PipelineActivity brentlaster-simplepy-master-2 with version 0.0.2
+Updated PipelineActivities brentlaster-simplepy-master-2 with release notes URL: https://github.com/brentlaster/simplepy/releases/tag/v0.0.2
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file simplepy-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mbrentlaster-simplepy-master-hrqqj-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app simplepy version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/explore-jenkinsx/environment-**4-staging/pull/12
+Added label updatebot to Pull Request https://github.com/explore-jenkinsx/environment-**4-staging/pull/12
+got git provider status pending from PR https://github.com/explore-jenkinsx/environment-**4-staging/pull/12
+got git provider status pending from PR https://github.com/explore-jenkinsx/environment-**4-staging/pull/12
+got git provider status pending from PR https://github.com/explore-jenkinsx/environment-**4-staging/pull/12
+got git provider status pending from PR https://github.com/explore-jenkinsx/environment-**4-staging/pull/12
